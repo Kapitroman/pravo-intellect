@@ -1,0 +1,166 @@
+.intro {
+  position: relative;
+
+  margin-top: -195px;
+  min-height: 950px;
+
+  background-color: $color-bg2;
+
+  @include vp-1919 {
+    min-height: calc(950 / 1920 * 100vw);
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    min-height: initial;
+    overflow: hidden;
+  }
+
+  &__images {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    //height: 100%;
+    width: 55%;
+    aspect-ratio: 1055 / 950;
+
+    background-image: url("../img/content/intro-1.webp"), url("../img/content/birds.webp");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 100% 100%, 0 0;
+    background-size: 100% auto, 96% auto;
+
+    @include vp-1919 {
+      height: auto;
+      width: 55%;
+    }
+
+    @include vp-767 {
+      position: relative;
+
+      width: 146%;
+      margin-left: -11.95%;
+      margin-top: -60px;
+    }
+
+    @include retina {
+      background-image: url("../img/content/intro-1@2x.webp"), url("../img/content/birds.webp");
+    }
+  }
+
+  &__text-wrapper {
+    position: relative;
+    z-index: 3;
+
+    padding-top: 195px;
+    padding-bottom: 55px;
+
+    @include vp-1919 {
+      padding-bottom: calc(55 / 1920 * 100vw);
+    }
+
+    @include vp-767 {
+      padding-top: 88px;
+      padding-bottom: 0; ////
+    }
+
+    .text-indent {
+      margin-left: 309px;
+      max-width: 512px;
+
+      @include vp-1919 {
+        margin-left: calc(309 / 1920 * 100vw - 10vw);
+      }
+
+      @include vp-1279 {
+        margin-left: 40px;
+        max-width: calc(512 / 1920 * 100vw + 5vw);
+      }
+
+      @include vp-767 {
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__title-wrapper {
+    padding-top: 197px;
+    padding-bottom: 108px;
+
+    @include vp-1919 {
+      padding-top: calc(197 / 1920 * 100vw - 5vw);
+      padding-bottom: calc(108 / 1920 * 100vw);
+    }
+
+    @include vp-767 {
+      padding-top: 24px;
+      padding-bottom: 20px;
+    }
+
+    p {
+      margin: 0;
+      padding-left: 115px;
+
+      font-family: $ff-good-vibes;
+      font-size: 68px;
+      line-height: 80%;
+      color: $color-main;
+
+      @include vp-1919 {
+        padding-left: calc(115 / 1920 * 100vw);
+        font-size: calc(68 / 1920 * 100vw);
+      }
+
+      @include vp-767 {
+        font-size: 24px;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      margin-top: -10px;
+
+      width: min-content;
+
+      font-size: 150px;
+      line-height: 80%;
+      letter-spacing: -0.04em;
+
+      @include vp-1919 {
+        margin: calc(-10 / 1920 * 100vw);
+        font-size: calc(150 / 1920 * 100vw);
+      }
+
+      @include vp-767 {
+        margin: 0;
+        font-size: 52px;
+      }
+    }
+  }
+
+  .intro__mask {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    aspect-ratio: 1055 / 786;
+  }
+
+  .circle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    fill: $color-main;
+    mix-blend-mode: color-burn;
+    opacity: 0.7;
+
+    -webkit-mask-image: url("../img/content/intro-1.webp");
+    mask-image: url("../img/content/intro-1.webp");
+    mask-repeat: no-repeat;
+    mask-position: 100% 100%;
+    mask-size: 100% auto;
+  }
+}

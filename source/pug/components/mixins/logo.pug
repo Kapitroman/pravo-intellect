@@ -1,0 +1,9 @@
+mixin logo(target)
+  - const position = target
+  if(currentUrl === "index.html")
+    .logo&attributes(attributes)
+      img(src= `./img/svg/logo-${position}.svg`, width="156", height="44", alt="Логотип проекта")
+
+  else
+    a.logo(href="index.html", aria-label="Переход на главную")&attributes(attributes)
+      img(src= `./img/svg/logo-${position}.svg`, width="156", height="44", alt="Логотип проекта")

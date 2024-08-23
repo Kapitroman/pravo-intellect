@@ -2,30 +2,32 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "about.html",
+        text: "О нас"
       },
       {
-        href: "#",
-        text: "Страница 2"
+        href: "practices",
+        text: "Практики"
       },
       {
-        href: "#",
-        text: "Страница 3"
+        href: "team.html",
+        text: "Команда"
+      },
+      {
+        href: "news.html",
+        text: "Новости"
+      },
+      {
+        href: "contacts.html",
+        text: "Контакты"
       },
     ]
 
-  header.header(class=headerMods)
+  header.header(class=headerMods, data-header="")
     .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
+      +logo("header")
+      .header__wrapper(data-close-menu)
+        nav.main-nav
           ul.main-nav__list
             each link in headerLinks
               - const activeState = currentUrl === link.href
@@ -34,3 +36,15 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active= link.text
                 else
                   a.main-nav__link(href=link.href)= link.text
+        p.text-indent.header__slogan
+          | От простой консультации до сложных судебных споров – мы всегда рядом,
+          | чтобы вы могли уверенно двигаться вперед.
+        //-+link-consultation()
+        +btn({
+          href: "#",
+          text: "Консультация"
+        })
+      button.header__menu-button(type="button", data-burger, aria-label="Переключатель отображения меню", aria-pressed="false")
+        +icon("open-burger", 15, 15).header__open-burger
+        +icon("close-burger", 15, 15).header__close-burger
+

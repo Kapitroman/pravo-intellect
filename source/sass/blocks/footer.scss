@@ -1,5 +1,386 @@
 .footer {
-  padding: 40px 0;
+  color: $color-white;
 
-  background-color: $color-neon-blue;
+  background-color: $color-black;
+
+  &__top {
+    padding-top: 120px;
+    border-bottom: 1px solid rgba($color-white, 0.1);
+
+    @include vp-767 {
+      padding-top: 80px;
+      border-bottom: none;
+    }
+
+    .container-inner {
+      gap: 64px;
+
+      @include vp-1759 {
+        gap: 32px;
+      }
+
+      @include vp-767 {
+        flex-direction: column;
+        gap: initial;
+      }
+    }
+  }
+
+  .container-inner {
+    display: flex;
+  }
+
+  &__contacts-slogan {
+    width: 50%;
+
+    @include vp-767 {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    p {
+      width: min-content;
+      margin: 0;
+      margin-right: auto;
+
+      font-size: 72px;
+      line-height: 80%;
+      letter-spacing: -0.04em;
+
+      @include vp-1279 {
+        font-size: 48px;
+        line-height: 80%;
+      }
+
+      @include vp-767 {
+        font-size: 48px;
+        line-height: 80%;
+      }
+    }
+  }
+
+  &__contacts-info-wrapper {
+    width: 50%;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__contacts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 67px;
+    column-gap: 64px;
+
+    margin-bottom: 80px;
+
+    @include vp-1759 {
+      column-gap: 32px;
+    }
+
+    @include vp-1279 {
+      column-gap: 24px;
+      row-gap: 32px;
+    }
+
+    @include vp-767 {
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    a {
+      transition: opacity $trans-default;
+      color: $color-white;
+      text-decoration-line: underline;
+      text-underline-offset: 4px;
+
+      @include hover-focus {
+        opacity: 0.7;
+      }
+    }
+
+    .footer__contacts-data--tel a {
+      text-decoration: none;
+    }
+  }
+
+  &__contacts-group {
+    width: 245px;
+
+    @include vp-1279 {
+      width: 200px;
+    }
+
+    @include vp-767 {
+      width: 300px;
+    }
+  }
+
+  &__contacts-title {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: #81858C;
+
+    @include vp-767 {
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+  }
+
+  &__contacts-data {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin: 0;
+
+    font-size: 24px;
+    line-height: 26.4px;
+    letter-spacing: -0.04em;
+
+    @include vp-1279 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  .btn {
+    @include vp-767 {
+      width: calc(100% + 24px + 24px);
+      margin: 0 -24px;
+    }
+  }
+
+  &__bottom {
+    padding: 64px 0 29px 0;
+
+    @include vp-767 {
+      padding: 59px 0 24px 0;
+    }
+
+    .container-inner {
+      flex-direction: column;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+
+    margin-bottom: 64px;
+
+    @include vp-1759 {
+      gap: 32px;
+    }
+
+    @include vp-767 {
+      gap: initial;
+
+      margin-bottom: 40px;
+
+      .footer__group-side:first-child {
+        display: none;
+      }
+    }
+  }
+
+  &__group-side {
+    width: 50%;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 48px;
+    row-gap: 24px;
+
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: -0.02em;
+
+    @include vp-767 {
+      column-gap: 24px;
+
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &__menu-link {
+    color: $color-white;
+    text-decoration-line: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: $color-white;
+
+    transition: text-decoration-color $trans-default;
+
+    &.is-active {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    @include hover-focus {
+      text-decoration-color: $color-transparent;
+    }
+  }
+
+  &__company-info-data {
+    display: flex;
+    gap: 64px;
+
+    margin-bottom: 80px;
+
+    @include vp-1759 {
+      gap: 32px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 40px;
+
+      margin-bottom: 40px;
+    }
+  }
+
+  &__info-links {
+    max-width: 554px;
+    border: 1px solid rgba($color-white, 0.1)
+  }
+
+  &__info-item-links {
+    padding: 23px 29px;
+
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: -0.02em;
+
+    @include vp-767 {
+      padding: 19px 23px;
+
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 24px;
+      color: $color-txt2;
+
+      @include vp-767 {
+        margin-bottom: 20px;
+      }
+    }
+
+    a {
+      color: $color-white;
+      text-decoration-line: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: $color-white;
+
+      transition: text-decoration-color $trans-default;
+
+      @include hover-focus {
+        text-decoration-color: $color-transparent;
+      }
+    }
+  }
+
+  &__info-item-links+.footer__info-item-links {
+    border-top: 1px solid rgba($color-white, 0.1);
+  }
+
+  &__official-details {
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: -0.02em;
+    color: $color-txt2;
+
+    @include vp-767 {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p+p {
+      margin-top: 9px;
+
+      @include vp-767 {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__official-policies {
+    display: flex;
+    gap: 64px;
+
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.04em;
+    color: $color-txt2;
+
+    @include vp-1759 {
+      gap: 32px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 16px;
+
+      font-size: 13px;
+      line-height: 13px;
+    }
+
+    a {
+      color: $color-txt2;
+
+      transition: opacity $trans-default;
+
+      @include hover-focus {
+        opacity: 0.7;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .footer__group-side {
+      display: flex;
+      justify-content: space-between;
+
+      @include vp-767 {
+        flex-direction: column;
+        justify-content: initial;
+        gap: 16px;
+      }
+    }
+  }
+
+  &__policy {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 }

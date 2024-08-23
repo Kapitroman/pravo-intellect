@@ -1,13 +1,153 @@
 .header {
-  padding: 28px 0;
+  padding: 40px 0 26px 0;
+  border-bottom: 1px solid $color-sep;
 
-  background-color: $color-neon-blue;
+  background-color: $color-bg;
+
+  @include vp-767 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+
+    width: 100%;
+    padding: 20px 0;
+
+    &.is-open {
+      background-color: $color-white;
+    }
+  }
 
   .container {
     display: flex;
+
+    @include vp-767 {
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
-  &__logo {
-    color: $color-default-white;
+  .logo {
+    margin-right: calc(152 / 1636 * (100% - 156px));
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    width: calc(1484 / 1636 * (100% - 156px));
+
+    @include vp-767 {
+      position: fixed;
+      top: 88px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      width: 100%;
+
+      background: rgba(37, 40, 46, 0.6);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+
+      .is-open & {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+      }
+    }
+  }
+
+  .main-nav {
+    margin-right: 35px;
+
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+
+  &__slogan {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  .btn {
+    margin-left: 30px;
+    margin-top: -40px;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__menu-button {
+    display: none;
+    position: relative;
+
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50px;
+    border: 1px solid #D1CFCD;
+
+    background-color: $color-transparent;
+    cursor: pointer;
+
+    @include vp-767 {
+      display: inline-flex;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 16px;
+      height: 16px;
+
+      transition: opacity $trans-default;
+    }
+  }
+
+  &__open-burger {
+    opacity: 1;
+
+    .is-open & {
+      opacity: 0;
+    }
+  }
+
+  &__close-burger {
+    opacity: 0;
+
+    .is-open & {
+      opacity: 1;
+    }
+  }
+
+  &--main {
+    position: relative;
+    z-index: 10;
+
+    padding: 40px 0 27px 0;
+    border-bottom: none;
+
+    background-color: $color-transparent;
+
+    @include vp-767 {
+      position: fixed;
+      padding: 20px 0;
+
+      background-color: $color-bg2;
+    }
   }
 }

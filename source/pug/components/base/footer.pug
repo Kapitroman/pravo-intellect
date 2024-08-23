@@ -1,3 +1,93 @@
 mixin footer(footerMods)
+  -
+    const headerLinks = [
+      {
+        href: "about.html",
+        text: "О нас"
+      },
+      {
+        href: "practices",
+        text: "Корпоративные практики"
+      },
+      {
+        href: "team.html",
+        text: "Команда"
+      },
+      {
+        href: "news.html",
+        text: "Новости"
+      },
+      {
+        href: "contacts.html",
+        text: "Контакты"
+      },
+    ]
   footer.footer(class=footerMods)
-    .container
+    .footer__top
+      .container-inner
+        .footer__contacts-slogan
+          p Связаться с нами
+        .footer__contacts-info-wrapper
+          .footer__contacts-wrapper
+            .footer__contacts-group
+              p.footer__contacts-title Телефон:
+              p.footer__contacts-data.footer__contacts-data--tel
+                a(href="tel:+74992262602") 8 (499) 226-26-02
+            .footer__contacts-group
+              p.footer__contacts-title E-mail:
+              p.footer__contacts-data
+                a(href="mailto:info@masrur.ru") info@masrur.ru
+            .footer__contacts-group
+              p.footer__contacts-title Адрес:
+              p.footer__contacts-data Москва, ул. Радио, дом&nbsp;10,&nbsp;стр.4
+            .footer__contacts-group
+              p.footer__contacts-title Социальные сети:
+              p.footer__contacts-data
+                a(href="№") Inst
+                a(href="#") Wa
+                a(href="#") Tg
+          +btn({
+            href: "#",
+            text: "Консультация"
+          })
+    .footer__bottom
+      .container-inner
+        .footer__menu
+          .footer__group-side
+            +logo("footer")
+          .footer__group-side
+            ul.footer__menu-list
+              each link in headerLinks
+                - const activeState = currentUrl === link.href
+                li.footer__menu-item
+                  if(activeState)
+                    span.footer__menu-link.is-active= link.text
+                  else
+                    a.footer__menu-link(href=link.href)= link.text
+        .footer__company-info-data
+          .footer__group-side
+            .footer__info-links
+              .footer__info-item-links
+                p.footer__info-title Федеральная палата адвокатов
+                a(href="https://fparf.ru").footer__info-link https://fparf.ru
+              .footer__info-item-links
+                p.footer__info-title Адвокатская палата города Москвы
+                a(href="https://www.advokatymoscow.ru").footer__info-link https://www.advokatymoscow.ru
+          .footer__group-side
+            .footer__official-details
+              p Московская коллегия адвокатов «Интеллект и право»
+              p Адрес: Москва, ул. Радио, д.10 стр.4
+              p Телефон: 8 (499) 226-26-02; 89035885025
+              p ОГРН: 1227700742653
+              p ИНН: 9725101884
+              p Реквизиты: МКА «Интеллект и право»
+              p Расчётный счёт: 40703810500000004232
+              p В АО «РайффайзенБанк», БИК 044525700 к/с 30101810200000000700
+        .footer__official-policies
+          .footer__group-side
+            p.footer__copyright-company © 2024 «Интеллект и право».
+          .footer__group-side
+            a(href="#").footer__policy Политика конфиденциальности
+            a(href="https://ruso.ru/").footer__developer
+              span Сделано в
+              +icon("ruso", 52, 11)

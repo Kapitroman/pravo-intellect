@@ -1,10 +1,17 @@
 mixin intro()
-  .intro
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+  section.intro
     .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
-
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+      .intro__text-wrapper
+        .intro__title-wrapper
+          p Московское
+          h1 Адвокатское бюро
+        p.text-indent
+          | Мы оказываем юридическую помощь гражданам и организациям в различных областях права.
+          | Наша команда состоит из адвокатов с богатым опытом работы в судебной системе, прокуратуре,
+          | государственных корпорациях, бизнесе и органах власти. Благодаря опыту и командной работе,
+          | мы находим нестандартные правовые пути для решения поставленных перед нами задач.
+    .intro__images
+      .intro__mask
+        <svg class="circle" viewBox="0 0 1055 950" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="294" cy="470" rx="250" ry="150" transform="rotate(-20 294 470)" />
+        </svg>
