@@ -2419,7 +2419,7 @@ a.logo.focus-visible:focus {
   width: 100%;
   aspect-ratio: 1055/786;
 }
-.intro .circle {
+.intro .blink {
   position: absolute;
   bottom: 0;
   right: 0;
