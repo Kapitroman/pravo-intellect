@@ -2275,6 +2275,48 @@ a.logo.focus-visible:focus {
   }
 }
 
+.bread-crumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 767px) {
+  .bread-crumbs {
+    font-size: 13px;
+  }
+}
+.bread-crumbs a[href] {
+  color: #81858C;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 4px;
+  -webkit-text-decoration-color: #81858C;
+          text-decoration-color: #81858C;
+  -webkit-transition: -webkit-text-decoration-color 0.3s ease;
+  transition: -webkit-text-decoration-color 0.3s ease;
+  transition: text-decoration-color 0.3s ease;
+  transition: text-decoration-color 0.3s ease, -webkit-text-decoration-color 0.3s ease;
+}
+@media (hover: hover) {
+  .bread-crumbs a[href]:hover:not(.focus-visible) {
+    -webkit-text-decoration-color: rgba(255, 255, 255, 0);
+            text-decoration-color: rgba(255, 255, 255, 0);
+  }
+}
+.bread-crumbs a[href].focus-visible:focus {
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0);
+          text-decoration-color: rgba(255, 255, 255, 0);
+}
+
 .intro {
   position: relative;
   margin-top: -195px;
@@ -2442,46 +2484,6 @@ a.logo.focus-visible:focus {
           mask-size: 100% auto;
 }
 
-.mask-image-example {
-  display: block;
-  width: 780px;
-  width: 520px;
-  margin: 0 auto;
-  -webkit-mask-image: url("../img/mask/intro-1.png");
-  mask-image: url("../img/mask/intro-1.png");
-  -webkit-animation: moveMask 6s infinite alternate;
-          animation: moveMask 6s infinite alternate;
-}
-
-/*
-@keyframes moveMask {
-  0% {
-    mask-position: 0px 0px;
-  }
-
-  100% {
-    mask-position: 100px 100px;
-  }
-}
-*/
-@-webkit-keyframes moveMask {
-  0% {
-    object-position: 0px 0px;
-  }
-  100% {
-    object-position: 500px 500px;
-  }
-}
-@keyframes moveMask {
-  0% {
-    -o-object-position: 0px 0px;
-       object-position: 0px 0px;
-  }
-  100% {
-    -o-object-position: 500px 500px;
-       object-position: 500px 500px;
-  }
-}
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {

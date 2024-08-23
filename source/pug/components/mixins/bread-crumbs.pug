@@ -1,0 +1,9 @@
+mixin bread-crumbs(options)
+  .bread-crumbs
+    each item, index in options
+      if index === (options.length - 1)
+        span=item.text
+      else
+        a(href=`${item.href}`)=item.text
+        +icon("line", 24, 2)
+
