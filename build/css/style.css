@@ -2389,6 +2389,21 @@ a.logo.focus-visible:focus {
           transform: translate(-50%, -100%);
 }
 
+.title-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.title-group h2 {
+  margin: 0;
+  font-size: 88px;
+  line-height: 80%;
+  letter-spacing: -0.04em;
+}
+
 .intro {
   position: relative;
   margin-top: -195px;
