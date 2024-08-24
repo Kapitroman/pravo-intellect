@@ -1,0 +1,31 @@
+mixin contacts()
+  section.section-main.contacts
+    .container-inner
+      +bread-crumbs([
+        {
+          text: "Главная",
+          href: "index.html"
+        },
+        {
+          text: "Контакты"
+        }
+      ])
+      h1 Контакты
+      .contacts__info
+        .contacts__item
+          p.contacts__item-title Адрес:
+          p.contacts__item-value Москва, ул. Радио, дом 10, стр.4
+        .contacts__item
+          p.contacts__item-title Телефон:
+          a(href="tel:+74992262602").contacts__item-value 8 (499) 226-26-02
+        .contacts__item
+          p.contacts__item-title E-mail:
+          a(href="mailto:info@masrur.ru").contacts__item-value info@masrur.ru
+        .contacts__item
+          p.contacts__item-title Социальные сети:
+          .contacts__item-value
+            a(href="#") Inst
+            a(href="#") Wa
+            a(href="#") Tg
+    .container
+      div(id="map")

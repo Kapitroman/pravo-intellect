@@ -1,0 +1,89 @@
+.contacts {
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 64px;
+    row-gap: 32px;
+
+    margin-bottom: 60px;
+
+    @include vp-1279 {
+      column-gap: 32px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  .contacts__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    width: 245px;
+
+    @include vp-1279 {
+      gap: 8px;
+
+      width: 340px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  .contacts__item:first-child {
+    width: 399px;
+
+    @include vp-1279 {
+      width: 340px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: $color-txt2;
+
+    @include vp-767 {
+      font-size: 13px;
+    }
+  }
+
+  &__item-value {
+    display: flex;
+    gap: 16px;
+
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+
+    @include vp-767 {}
+  }
+
+  a[href] {
+    transition: opacity $trans-default;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+  }
+
+  a[href^=tel] {
+    text-decoration: none;
+  }
+}

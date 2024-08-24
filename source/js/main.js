@@ -7,6 +7,7 @@ import { uploadFile, uploadImageDrop } from './modules/input-file/init-upload';
 import { Burger } from './modules/burger';
 import { initScrollBlink } from './modules/init-scroll-blink';
 import { initScrollSeparator } from './modules/init-scroll-separator';
+import { initYM } from './modules/init-map';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -35,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     burger.init();
     initScrollBlink();
     initScrollSeparator();
+    initYM();
   });
 });
 

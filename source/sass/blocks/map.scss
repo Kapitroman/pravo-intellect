@@ -1,0 +1,27 @@
+#map {
+  width: 100%;
+  height: 600px;
+
+  overflow: hidden;
+
+  @include vp-767 {
+    height: 480px;
+  }
+
+  .ymaps3x0--map-copyrights {
+    display: none;
+  }
+
+  .ymaps3x0--marker-layer {
+    width: 100px !important;
+  }
+
+  img.icon-marker {
+    width: 27px;
+    height: 36px;
+    border-radius: 0 !important;
+
+    position: relative;
+    transform: translate(-50%, -100%);
+  }
+}

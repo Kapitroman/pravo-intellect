@@ -1,0 +1,46 @@
+.section-main {
+  margin-top: 40px;
+  margin-bottom: 180px;
+
+  @include vp-767 {
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+
+  .bread-crumbs {
+    margin-bottom: 80px;
+
+    @include vp-767 {
+      margin-bottom: 40px;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 80px;
+
+    font-size: 108px;
+    line-height: 80%;
+    letter-spacing: -0.04em;
+
+    @include vp-767 {
+      margin-bottom: 60px;
+
+      font-size: 40px;
+    }
+  }
+}
+
+.section {
+  margin-bottom: 180px;
+
+  @include vp-767 {
+    margin-bottom: 100px;
+  }
+}
+
+main {
+  @include vp-767 {
+    padding-top: 88px;
+  }
+}
