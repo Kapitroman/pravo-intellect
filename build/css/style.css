@@ -2396,12 +2396,30 @@ a.logo.focus-visible:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .title-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    margin-bottom: 45px;
+  }
 }
 .title-group h2 {
   margin: 0;
   font-size: 88px;
   line-height: 80%;
   letter-spacing: -0.04em;
+}
+@media (max-width: 767px) {
+  .title-group h2 {
+    font-size: 36px;
+  }
 }
 
 .intro {

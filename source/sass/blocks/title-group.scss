@@ -2,11 +2,24 @@
   display: flex;
   justify-content: space-between;
 
+  margin-bottom: 80px;
+
+  @include vp-767 {
+    flex-direction: column;
+    justify-content: initial;
+
+    margin-bottom: 45px;
+  }
+
   h2 {
     margin: 0;
 
     font-size: 88px;
     line-height: 80%;
     letter-spacing: -0.04em;
+
+    @include vp-767 {
+      font-size: 36px;
+    }
   }
 }
