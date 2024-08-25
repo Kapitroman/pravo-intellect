@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Дмитрий Фомин и партнеры. Практики"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "services.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    +services()
+
+
+
+
+
+block modals

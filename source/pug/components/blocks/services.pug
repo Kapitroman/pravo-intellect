@@ -1,0 +1,14 @@
+mixin services()
+  section.section-main
+    .container-inner
+      +bread-crumbs([
+        {
+          text: "Главная",
+          href: "index.html"
+        },
+        {
+          text: "Практики"
+        }
+      ])
+      h1 Практики
+    +practices()
