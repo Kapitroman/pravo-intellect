@@ -1,0 +1,56 @@
+.slider-navigation {
+  display: flex;
+  gap: 16px;
+
+  //width: 112px;
+  //height: 48px;
+
+  &__button.swiper-button-prev,
+  &__button.swiper-button-next {
+    position: static;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 0;
+    border: 1px solid $color-sep;
+    margin-top: 0;
+
+    background-color: $color-transparent;
+
+    transition: border-color $trans-default;
+
+    @include vp-767 {}
+
+    &::after {
+      display: none;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      color: $color-black;
+
+      transition: color $trans-default;
+    }
+
+    @include hover-focus {
+      border-color: $color-main;
+
+      svg {
+        color: $color-main
+      }
+    }
+  }
+
+  &__button.swiper-button-next {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

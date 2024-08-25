@@ -3,7 +3,7 @@
 
 @import "vendor/normalize";
 // Swiper 8.4.7
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -41,6 +41,8 @@
 @import "blocks/practices";
 @import "blocks/card-partner";
 @import "blocks/card-news-item";
+@import "blocks/slider-navigation";
+@import "blocks/title-navigator";
 
 @import "blocks/intro";
 @import "blocks/contacts";

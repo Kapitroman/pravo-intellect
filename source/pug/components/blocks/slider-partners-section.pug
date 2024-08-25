@@ -1,0 +1,56 @@
+mixin slider-partners-section()
+  -
+    const team = [
+      {
+        image: "partner-1",
+        name: "Фомин Дмитрий Анатольевич",
+        post: "Председатель Коллегии"
+      },
+      {
+        image: "partner-2",
+        name: "Сукноваленко Виктор Михайлович",
+        post: "Юрист"
+      },
+      {
+        image: "partner-3",
+        name: "Тоцкая Алина Александровна",
+        post: "Юрист"
+      },
+      {
+        image: "partner-4",
+        name: "Чуркина Олеся Валерьевна",
+        post: "Юрист"
+      },
+      {
+        image: "partner-5",
+        name: "Джалилов Масрур Максудович",
+        post: "Юрист"
+      },
+      {
+        image: "partner-6",
+        name: "Мариненко Кирилл Алексеевич",
+        post: "Юрист"
+      },
+      {
+        image: "partner-7",
+        name: "Власюк Полина Андреевна",
+        post: "Юрист"
+      },
+      {
+        image: "partner-8",
+        name: "Власюк Полина Андреевна",
+        post: "Юрист"
+      },
+    ];
+  section.section-slider
+    .title-group
+      .container-inner
+        h2 Партнеры
+        .title-navigator
+          a(href="#").title-navigator__link все партнеры
+          +slider-navigation()
+    .container
+      .slider-partners.swiper
+        .swiper-wrapper
+          each item in team
+            +card-partner(item).swiper-slide

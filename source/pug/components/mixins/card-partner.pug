@@ -1,5 +1,5 @@
 mixin card-partner(options)
-  a(href="#").card-partner
+  a(href="#").card-partner&attributes(attributes)
     .card-partner__photo
       +picture("content/partners", options.image, "png", 555, 631, "фото-сотрудника", false )
     .card-partner__info

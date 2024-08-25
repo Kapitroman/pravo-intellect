@@ -8,6 +8,7 @@ import { Burger } from './modules/burger';
 import { initScrollBlink } from './modules/init-scroll-blink';
 import { initScrollSeparator } from './modules/init-scroll-separator';
 import { initYM } from './modules/init-map';
+import { initPartnersSlider } from './modules/init-partners-slider';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -37,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initScrollBlink();
     initScrollSeparator();
     initYM();
+    initPartnersSlider();
   });
 });
 

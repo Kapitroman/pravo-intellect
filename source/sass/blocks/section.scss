@@ -39,6 +39,17 @@
   }
 }
 
+.section-slider {
+  position: relative;
+
+  margin-bottom: 180px;
+
+  @include vp-767 {
+    padding-bottom: 71px;
+    margin-bottom: 100px;
+  }
+}
+
 main {
   @include vp-767 {
     padding-top: 88px;
