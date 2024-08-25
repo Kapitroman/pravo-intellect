@@ -1,0 +1,36 @@
+mixin news()
+  section.section-main.news
+    .container-inner
+      +bread-crumbs([
+        {
+          text: "Главная",
+          href: "index.html"
+        },
+        {
+          text: "Новости"
+        }
+      ])
+      h1 Новости
+
+    .container
+      .news__wrapper
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+        +card-news-item
+      .news__pagination
+        a(href="#").news__pagination-item.news__pagination-item--active 1
+        a(href="#").news__pagination-item 2
+        a(href="#").news__pagination-item 3

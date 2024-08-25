@@ -1,0 +1,89 @@
+.card-news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 100%;
+
+  &__data {
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: $color-txt2;
+
+    @include vp-767 {
+      font-size: 13px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include vp-767 {
+      font-size: 20px;
+    }
+  }
+
+  &__description {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include vp-767 {
+      font-size: 15px;
+    }
+  }
+
+  &__tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin: 0;
+  }
+
+  &__tag-item {
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: $color-txt2;
+
+    transition: opacity $trans-default;
+
+    @include vp-767 {
+      font-size: 13px;
+    }
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+  }
+}
