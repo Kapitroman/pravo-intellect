@@ -9,6 +9,7 @@ import { initScrollBlink } from './modules/init-scroll-blink';
 import { initScrollSeparator } from './modules/init-scroll-separator';
 import { initYM } from './modules/init-map';
 import { initPartnersSlider } from './modules/init-partners-slider';
+import { initNewsSlider } from './modules/init-news-slider';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -39,6 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initScrollSeparator();
     initYM();
     initPartnersSlider();
+    initNewsSlider();
   });
 });
 

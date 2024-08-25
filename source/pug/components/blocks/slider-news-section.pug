@@ -1,0 +1,27 @@
+mixin slider-news-section(title)
+  section.section-slider
+    .title-group
+      .container-inner
+        h2= title
+        .title-navigator
+          a(href="./news.html").title-navigator__link все новости
+          +slider-navigation()
+    .container
+      .slider-news.swiper
+        .swiper-wrapper
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
+          +card-news-item().swiper-slide
