@@ -1,0 +1,19 @@
+.policy {
+  &__text {
+    p {
+      margin: 0;
+
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+
+      @include vp-767 {
+        font-size: 15px;
+      }
+    }
+
+    p+p {
+      margin-top: 10px;
+    }
+  }
+}
