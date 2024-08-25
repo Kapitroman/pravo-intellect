@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Дмитрий Фомин и партнеры. Ошибка 404"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "error.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    +error()
+
+
+
+
+
+block modals
