@@ -1,0 +1,7 @@
+mixin card-partner()
+  a(hef="#").card-partner
+    .card-partner__photo
+      +picture("content/partners", options.image, "png", 555, 631, "фото-сотрудника", false )
+    .card-partner__info
+      p.card-partner__name= options.name
+      p.card-partner__post= options.post

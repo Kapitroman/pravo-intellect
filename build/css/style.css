@@ -2672,6 +2672,52 @@ a.logo.focus-visible:focus {
   border-top: 1px solid #EBE9E6;
 }
 
+.card-partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+.card-partner__photo {
+  width: 100%;
+  aspect-ratio: 555/631;
+}
+.card-partner__photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-partner__name {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: -0.04em;
+}
+@media (max-width: 767px) {
+  .card-partner__name {
+    font-size: 20px;
+  }
+}
+.card-partner__post {
+  margin: 0;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #81858C;
+}
+@media (max-width: 767px) {
+  .card-partner__post {
+    font-size: 15px;
+  }
+}
+
 .intro {
   position: relative;
   margin-top: -195px;
