@@ -2682,6 +2682,8 @@ a.logo.focus-visible:focus {
           flex-direction: column;
   gap: 25px;
   width: 100%;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .card-partner__photo {
   width: 100%;
@@ -2716,6 +2718,14 @@ a.logo.focus-visible:focus {
   .card-partner__post {
     font-size: 15px;
   }
+}
+@media (hover: hover) {
+  .card-partner:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.card-partner.focus-visible:focus {
+  opacity: 0.7;
 }
 
 .intro {
@@ -2986,6 +2996,24 @@ a.logo.focus-visible:focus {
 }
 .contacts a[href^=tel] {
   text-decoration: none;
+}
+
+.team__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 64px;
+}
+@media (max-width: 767px) {
+  .team__wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+@media (max-width: 374px) {
+  .team__wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* @mixin hover-focus {
