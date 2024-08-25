@@ -1,0 +1,51 @@
+.title-practice {
+  //display: inline-flex;
+  //flex-direction: column;
+
+  max-width: 592px;
+  margin: 0;
+
+  font-size: 48px;
+  line-height: 80%;
+  letter-spacing: -0.04em;
+
+  @include vp-1919 {
+    max-width: 336px;
+
+    font-size: 36px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__item-second {
+    display: block;
+  }
+
+  &__number {
+    position: absolute;
+    right: -48px;
+    top: -16px;
+
+    font-family: $ff-good-vibes;
+    font-size: 30px;
+    line-height: 100%;
+    color: $color-main;
+
+    @include vp-767 {
+      right: -41px;
+      top: -14px;
+
+      font-size: 24px;
+    }
+  }
+}

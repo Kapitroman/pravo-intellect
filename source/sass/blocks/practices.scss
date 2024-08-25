@@ -1,0 +1,8 @@
+.practices {
+  border-top: 1px solid $color-sep;
+  border-bottom: 1px solid $color-sep;
+
+  .service-item+.service-item {
+    border-top: 1px solid $color-sep;
+  }
+}

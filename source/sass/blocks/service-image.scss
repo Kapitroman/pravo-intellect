@@ -1,0 +1,22 @@
+.service-image {
+  width: 480px;
+  height: 320px;
+
+  mask-image: url("../img/content/services/mask.png");
+
+  @include vp-1439 {
+    width: 400px;
+    height: 267px;
+
+    mask-image: url("../img/content/services/mask-2.png");
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  pointer-events: none;
+}

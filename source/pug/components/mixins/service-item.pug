@@ -1,0 +1,7 @@
+mixin service-item(options)
+  a(href= options.href).service-item
+    .container
+      +title-practice(options.title[0], options.title[1], options.title[2])
+      +service-image(options.image)
+      p.service-item__text= options.text
+

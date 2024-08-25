@@ -1,14 +1,18 @@
 .title-group {
-  display: flex;
-  justify-content: space-between;
-
   margin-bottom: 80px;
 
   @include vp-767 {
-    flex-direction: column;
-    justify-content: initial;
-
     margin-bottom: 45px;
+  }
+
+  .container-inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-767 {
+      flex-direction: column;
+      justify-content: initial;
+    }
   }
 
   h2 {
@@ -20,6 +24,18 @@
 
     @include vp-767 {
       font-size: 36px;
+    }
+  }
+
+  .text-indent {
+    margin-top: auto;
+    max-width: 554px;
+
+    color: $color-txt2;
+
+    @include vp-767 {
+      margin-top: 20px;
+      text-align: center;
     }
   }
 }
