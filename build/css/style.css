@@ -3827,6 +3827,108 @@ a.logo.focus-visible:focus {
           text-decoration-color: rgba(255, 255, 255, 0);
 }
 
+.section-main-picture {
+  position: relative;
+  min-height: 760px;
+  margin-bottom: 180px;
+}
+@media (max-width: 1919px) {
+  .section-main-picture {
+    min-height: 39.5833333333vw;
+  }
+}
+@media (max-width: 767px) {
+  .section-main-picture {
+    min-height: auto;
+    margin-bottom: 100px;
+  }
+}
+.section-main-picture__images {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  aspect-ratio: 773/760;
+}
+@media (max-width: 1919px) {
+  .section-main-picture__images {
+    width: 40%;
+    height: auto;
+  }
+}
+.section-main-picture__images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .section-main-picture__images {
+    position: relative;
+    width: 100%;
+  }
+}
+.section-main-picture__info-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 710px;
+  padding-top: 40px;
+}
+@media (max-width: 1919px) {
+  .section-main-picture__info-wrapper {
+    max-width: 42.9791666667vw;
+  }
+}
+@media (max-width: 767px) {
+  .section-main-picture__info-wrapper {
+    max-width: 100%;
+  }
+}
+.section-main-picture .bread-crumbs {
+  margin-bottom: 120px;
+}
+@media (max-width: 1919px) {
+  .section-main-picture .bread-crumbs {
+    margin-bottom: 6.25vw;
+  }
+}
+@media (max-width: 767px) {
+  .section-main-picture .bread-crumbs {
+    margin-bottom: 40px;
+  }
+}
+.section-main-picture__title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 108px;
+  line-height: 80%;
+  letter-spacing: -0.04em;
+}
+@media (max-width: 1919px) {
+  .section-main-picture__title {
+    font-size: 5.625vw;
+  }
+}
+@media (max-width: 767px) {
+  .section-main-picture__title {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+}
+.section-main-picture__text p {
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 767px) {
+  .section-main-picture__text p {
+    font-size: 15px;
+  }
+}
+.section-main-picture__text p + p {
+  margin-top: 10px;
+}
+
 .intro {
   position: relative;
   margin-top: -195px;

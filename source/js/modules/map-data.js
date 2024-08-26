@@ -6,6 +6,6 @@ export const LOCATION = {
 // Array containing data for markers
 export const markerProps = {
   coordinates: [37.677724, 55.762135],
-  iconSrc: '../img/svg/marker.svg',
+  iconSrc: './img/svg/marker.svg',
   className: 'icon-marker',
 };
