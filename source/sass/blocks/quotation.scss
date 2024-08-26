@@ -1,0 +1,107 @@
+.quotation {
+  margin-bottom: 160px;
+  padding-top: 120px;
+  padding-bottom: 100px;
+
+  @include vp-767 {
+    margin-bottom: 60px;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  background-image: url("../img/content/about/background-about.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-bg;
+
+  @include retina {
+    background-image: url("../img/content/about/background-about@2x.webp");
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 1174px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include vp-1279 {
+      max-width: 80%;
+    }
+
+    @include vp-767 {
+      max-width: calc(100% - 2 * 24px);
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+
+    text-align: center;
+
+    @include vp-767 {
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin: 0;
+
+      font-size: 30px;
+      font-style: italic;
+      line-height: 110%;
+      letter-spacing: -0.04em;
+
+      @include vp-767 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__author-image {
+    width: 180px;
+    height: 160px;
+
+    margin-bottom: 24px;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__author-name {
+    margin: 0;
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+
+    @include vp-767 {
+      font-size: 18px;
+    }
+  }
+
+  &__author-post {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $color-txt2;
+
+    @include vp-767 {
+      font-size: 15px;
+    }
+  }
+}

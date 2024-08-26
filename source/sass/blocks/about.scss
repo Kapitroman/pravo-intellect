@@ -1,0 +1,50 @@
+.about {
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+
+    font-size: 108px;
+    line-height: 80%;
+    letter-spacing: -0.04em;
+
+    @include vp-1919 {
+      font-size: calc(108 / 1920 * 100vw);
+    }
+
+    @include vp-767 {
+      margin-bottom: 24px;
+
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    max-width: 710px;
+    //margin-bottom: 40px;
+    padding-bottom: 40px;
+
+    @include vp-1919 {
+      //max-width: calc(710 / 1920 * 100vw + 14vw);
+    }
+
+    @include vp-767 {
+      max-width: 100%;
+    }
+
+    p {
+      margin: 0;
+
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+
+      @include vp-767 {
+        font-size: 15px;
+      }
+    }
+
+    p+p {
+      margin-top: 10px;
+    }
+  }
+}

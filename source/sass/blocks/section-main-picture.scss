@@ -1,11 +1,11 @@
 .section-main-picture {
   position: relative;
 
-  min-height: 760px;
-  margin-bottom: 180px;
+  min-height: 755px;
+  margin-bottom: 160px;
 
   @include vp-1919 {
-    min-height: calc(760 / 1920 * 100vw);
+    min-height: calc(755 / 1920 * 100vw);
   }
 
   @include vp-767 {
@@ -44,11 +44,13 @@
     position: relative;
     z-index: 2;
 
-    max-width: 710px;
+    //max-width: 710px;
+    max-width: 864px;
     padding-top: 40px;
 
     @include vp-1919 {
-      max-width: calc(710 / 1920 * 100vw + 6vw);
+      max-width: calc(864 / 1920 * 100vw);
+      //max-width: calc(710 / 1920 * 100vw + 6vw);
       //max-width: calc(710 / 1920 * 100vw + 10vw);
       //max-width: calc(850 / 1920 * 100vw);
     }
@@ -71,8 +73,11 @@
     }
   }
 
+  &--not-margin-bottom {
+    margin-bottom: 0;
+  }
 
-
+  /*
   &__title {
     margin: 0;
     margin-bottom: 50px;
@@ -113,5 +118,5 @@
       margin-top: 10px;
     }
   }
-
+  */
 }
