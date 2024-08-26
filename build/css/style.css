@@ -4458,7 +4458,6 @@ a.logo.focus-visible:focus {
 }
 
 .quotation {
-  margin-bottom: 160px;
   padding-top: 120px;
   padding-bottom: 100px;
   background-image: url("../img/content/about/background-about.webp");
@@ -4468,7 +4467,6 @@ a.logo.focus-visible:focus {
 }
 @media (max-width: 767px) {
   .quotation {
-    margin-bottom: 60px;
     padding-top: 120px;
     padding-bottom: 60px;
   }
@@ -4570,6 +4568,187 @@ a.logo.focus-visible:focus {
   .quotation__author-post {
     font-size: 15px;
   }
+}
+
+.about-office {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 155px;
+  padding-top: 160px;
+  padding-bottom: 119px;
+  border-bottom: 1px solid #EBE9E6;
+}
+@media (max-width: 1919px) {
+  .about-office {
+    gap: 8%;
+  }
+}
+@media (max-width: 767px) {
+  .about-office {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+    padding-top: 100px;
+    padding-bottom: 39px;
+  }
+}
+.about-office__left-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc((100% - 155px) * 837 / 1765);
+  padding-top: 22px;
+}
+@media (max-width: 1919px) {
+  .about-office__left-wrapper {
+    width: 43.6%;
+  }
+}
+@media (max-width: 767px) {
+  .about-office__left-wrapper {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+.about-office__image {
+  width: 837px;
+  margin-bottom: 60px;
+  aspect-ratio: 837/220;
+}
+@media (max-width: 1919px) {
+  .about-office__image {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .about-office__image {
+    margin-bottom: 40px;
+  }
+}
+.about-office__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-office__left-text {
+  max-width: 682px;
+  padding-right: 64px;
+  padding-left: 64px;
+  margin-left: auto;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #81858C;
+}
+@media (max-width: 1919px) {
+  .about-office__left-text {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+@media (max-width: 767px) {
+  .about-office__left-text {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 24px;
+    font-size: 15px;
+  }
+}
+.about-office__left-text p {
+  margin: 0;
+}
+.about-office__left-text p + p {
+  margin-top: 10px;
+}
+.about-office__right-wrapper {
+  width: calc((100% - 155px) * 928 / 1765);
+}
+@media (max-width: 1919px) {
+  .about-office__right-wrapper {
+    width: 48.4%;
+  }
+}
+@media (max-width: 767px) {
+  .about-office__right-wrapper {
+    width: 100%;
+  }
+}
+.about-office__title-group {
+  max-width: 864px;
+  margin-right: 7%;
+  margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  .about-office__title-group {
+    max-width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 20px;
+  }
+}
+.about-office__subtitle {
+  margin: 0;
+  padding-left: 60px;
+  font-family: "Good Vibes Pro", "Segoe Print", sans-serif;
+  font-size: 40px;
+  line-height: 80%;
+  color: #2C4D84;
+}
+@media (max-width: 1919px) {
+  .about-office__subtitle {
+    font-size: 3.0833333333vw;
+    padding-left: 1.3541666667vw;
+  }
+}
+@media (max-width: 767px) {
+  .about-office__subtitle {
+    font-size: 24px;
+    padding-left: 26px;
+  }
+}
+.about-office__title {
+  margin: 0;
+  font-size: 88px;
+  line-height: 80%;
+  letter-spacing: -0.04em;
+}
+@media (max-width: 1919px) {
+  .about-office__title {
+    font-size: 4.5833333333vw;
+  }
+}
+@media (max-width: 767px) {
+  .about-office__title {
+    font-size: 36px;
+  }
+}
+.about-office__right-text {
+  max-width: 709px;
+  margin-right: 7%;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 767px) {
+  .about-office__right-text {
+    max-width: 100%;
+    margin: 0 24px;
+    font-size: 15px;
+  }
+}
+.about-office p {
+  margin: 0;
+}
+.about-office p + p {
+  margin-top: 10px;
 }
 
 /* @mixin hover-focus {
