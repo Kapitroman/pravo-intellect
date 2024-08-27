@@ -1,0 +1,76 @@
+.colleague {
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-size: 108px;
+    line-height: 80%;
+    letter-spacing: -0.04em;
+
+    @include vp-1919 {
+      font-size: calc(108 / 1920 * 100vw);
+    }
+
+    @include vp-767 {
+      margin-bottom: 24px;
+
+      font-size: 40px;
+    }
+  }
+
+  &__pretext {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $color-txt2;
+
+    @include vp-767 {
+      margin-bottom: 24px;
+
+      font-size: 15px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    max-width: 710px;
+    padding-bottom: 40px;
+
+    @include vp-767 {
+      max-width: 100%;
+    }
+
+    p {
+      margin: 0;
+
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+
+      @include vp-767 {
+        font-size: 15px;
+      }
+    }
+
+    p+p {
+      margin-top: 10px;
+    }
+  }
+
+  .btn {
+    width: 400px;
+    margin-top: auto;
+
+    @include vp-767 {
+      width: calc(100% + 24px * 2);
+      margin-left: -24px;
+    }
+  }
+}
