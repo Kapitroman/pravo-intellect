@@ -1,0 +1,34 @@
+mixin advantages()
+  section.advantages.section
+    .container
+      .advantages__wrapper
+        .advantages__first-item
+          .advantages__first-item-wrapper
+            p.advantages__first-item-subtitle Преимущества
+            h2.advantages__first-item-title Почему мы?
+            p.advantages__first-item-text
+              | Принимая во внимание показатели успешности, семантический разбор внешних
+              | противодействий обеспечивает широкому кругу (специалистов) участие
+              | в формировании новых предложений.
+        +advantage-item({
+          icon: "shield",
+          title: "Конфиденциальность",
+          description: "Мы стремимся предоставить нашим Доверителям качественную и эффективную юридическую помощь."
+        })
+        +advantage-item({
+          icon: "circle-nodes",
+          title: "Комплексная экспертиза",
+          description: "Мы стремимся предоставить нашим Доверителям качественную и эффективную юридическую помощь."
+        })
+        +advantage-item({
+          icon: "shield",
+          title: "Конфиденциальность",
+          description: "Мы стремимся предоставить нашим Доверителям качественную и эффективную юридическую помощь."
+        })
+        +advantage-item({
+          icon: "circle-nodes",
+          title: "Комплексная экспертиза",
+          description: "Мы стремимся предоставить нашим Доверителям качественную и эффективную юридическую помощь."
+        })
+        .advantages__image
+          +picture("content", "why-we", "png", 400, 268, "декорация", true)

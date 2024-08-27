@@ -1,0 +1,53 @@
+.advantage-item {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+  padding-bottom: 31px;
+  border: 1px solid $color-sep;
+
+  @include vp-767 {
+    padding: 19px 23px;
+  }
+
+  svg {
+    width: 36px;
+    height: 36px;
+
+    margin-bottom: 36px;
+    margin-right: auto;
+  }
+
+  &__text {
+    margin-top: auto;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+
+    @include vp-767 {
+      font-size: 20px;
+    }
+  }
+
+  &__description {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $color-txt2;
+
+    @include vp-767 {
+      font-size: 15px;
+    }
+  }
+}

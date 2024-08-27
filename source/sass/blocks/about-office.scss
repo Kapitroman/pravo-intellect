@@ -5,6 +5,7 @@
   padding-top: 160px;
   padding-bottom: 119px;
   border-bottom: 1px solid $color-sep;
+  margin-bottom: 120px;
 
   @include vp-1919 {
     gap: 8%;
@@ -16,6 +17,7 @@
 
     padding-top: 100px;
     padding-bottom: 39px;
+    margin-bottom: 100px;
   }
 
   &__left-wrapper {
