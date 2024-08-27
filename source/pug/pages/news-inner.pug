@@ -1,0 +1,21 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Дмитрий Фомин и партнеры. Победы наших коллег на стамбульском премуте конкурса им. Виллема виса 2024"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "news-inner.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    +news-item-head()
+
+    +slider-news-section("Смотрите так же")
+
+
+
+
+block modals
