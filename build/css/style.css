@@ -4007,6 +4007,202 @@ a.logo.focus-visible:focus {
   }
 }
 
+.about-specialist h1 {
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 88px;
+  line-height: 80%;
+  letter-spacing: -0.04em;
+}
+@media (max-width: 767px) {
+  .about-specialist h1 {
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+}
+.about-specialist__info {
+  max-width: 100%;
+}
+.about-specialist__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .about-specialist__controls {
+    margin-bottom: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+@media (max-width: 767px) {
+  .about-specialist__controls::-webkit-scrollbar {
+    display: none;
+  }
+}
+.about-specialist__control {
+  min-width: auto;
+  padding: 20px 16px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: -0.04em;
+}
+@media (max-width: 767px) {
+  .about-specialist__control {
+    font-size: 20px;
+  }
+}
+@media (hover: hover) {
+  .about-specialist__control:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.about-specialist__control.focus-visible:focus {
+  opacity: 0.7;
+}
+.about-specialist__control.is-active {
+  border-bottom: 1px solid #2C4D84;
+  color: #2C4D84;
+  pointer-events: none;
+}
+.about-specialist__content {
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
+}
+.about-specialist__element {
+  width: 100%;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 767px) {
+  .about-specialist__element {
+    font-size: 15px;
+  }
+}
+.about-specialist__element p {
+  margin: 0;
+}
+.about-specialist__element ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.about-specialist__element li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+.about-specialist__element li::before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background-color: #25282E;
+}
+.about-specialist__element p + p {
+  margin-top: 10px;
+}
+.about-specialist__element P + ul {
+  margin-top: 20px;
+}
+.about-specialist__element ul + p {
+  margin-top: 20px;
+}
+
+[data-tabs=parent].no-transition > [data-tabs=control],
+[data-tabs=parent].no-transition > [data-tabs=content],
+[data-tabs=parent].no-transition > [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+[data-tabs=parent].no-transition-global [data-tabs=control],
+[data-tabs=parent].no-transition-global [data-tabs=content],
+[data-tabs=parent].no-transition-global [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent] [data-tabs=content] {
+  position: relative;
+}
+
+[data-tabs=element] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs=element].for-load {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=element].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+[data-accordion-init] > [data-tabs=content],
+[data-accordion-init] > [data-tabs=controls] {
+  display: none;
+}
+[data-accordion-init] [data-tabs=element] {
+  z-index: 1;
+  visibility: visible;
+  position: static;
+  opacity: 1;
+}
+
+[data-tabs=accordion-wrapper] {
+  display: block;
+  max-height: 0;
+  -webkit-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+[data-tabs=accordion-content] {
+  overflow: hidden;
+}
+
+[data-tabs=accordion] {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+[data-tabs=accordion].is-active > [data-tabs=accordion-wrapper] {
+  max-height: none;
+}
+
 .intro {
   position: relative;
   margin-top: -195px;

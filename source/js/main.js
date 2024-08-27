@@ -11,7 +11,8 @@ import { initYM } from './modules/init-map';
 import { initPartnersSlider } from './modules/init-partners-slider';
 import { initNewsSlider } from './modules/init-news-slider';
 import { copyInBuffer } from './modules/copy-in-buffer';
-
+import { initTabs } from './modules/init-tabs';
+import { initTabsSlider } from './modules/init-tabs-slider.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -44,6 +45,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initPartnersSlider();
     initNewsSlider();
     copyInBuffer();
+    initTabs();
+    initTabsSlider();
   });
 });
 
