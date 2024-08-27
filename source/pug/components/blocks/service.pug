@@ -1,0 +1,29 @@
+mixin service
+  section.service.section-main-picture.section-main-picture--not-margin-bottom
+    .container-inner
+      .section-main-picture__info-wrapper
+        +bread-crumbs([
+          {
+            text: "Главная",
+            href: "index.html"
+          },
+          {
+            text: "Практики",
+            href: "services.html"
+          },
+          {
+            text: "Общеуголовная практика"
+          }
+        ])
+        h1.service__title Общеуголовная практика
+        .service__text
+          p
+           | В рамках общеуголовной практики наши адвокаты оказывают квалифицированную юридическую помощь Доверителям по уголовным делам. Опыт и компетенция наших адвокатов позволяют использовать самые нестандартные решения при защите наших Доверителей.
+          p
+            | Мы поможем Вам определиться с правовой позицией по делу и собрать необходимые доказательства. Наша Коллегия гарантирует профессиональный и индивидуальный подход, а также абсолютную конфиденциальность.
+        +btn({
+          href: "#",
+          text: "Записаться на консультацию"
+        })
+    .section-main-picture__images
+      +picture("content/section", "service-inner", "png", 773, 760, false)

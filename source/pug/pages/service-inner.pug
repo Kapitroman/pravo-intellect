@@ -1,0 +1,23 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Дмитрий Фомин и партнеры. Общеуголовная практика"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "service.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    +service()
+    +about-service()
+    +advantages()
+    +slider-partners-section()
+    +slider-news-section("Новости")
+
+
+
+
+block modals

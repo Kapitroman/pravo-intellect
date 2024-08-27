@@ -44,20 +44,27 @@
     position: relative;
     z-index: 2;
 
+    display: flex;
+    flex-direction: column;
+
     //max-width: 710px;
     max-width: 864px;
     padding-top: 40px;
+    min-height: 760px;
 
     @include vp-1919 {
       max-width: calc(864 / 1920 * 100vw);
       //max-width: calc(710 / 1920 * 100vw + 6vw);
       //max-width: calc(710 / 1920 * 100vw + 10vw);
       //max-width: calc(850 / 1920 * 100vw);
+      //min-height: calc(764 / 1920 * 100vw);
+      min-height: initial;
     }
 
     @include vp-767 {
       max-width: 100%;
       //padding-bottom: 40px;
+      min-height: initial;
     }
   }
 

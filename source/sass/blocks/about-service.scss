@@ -1,0 +1,178 @@
+.about-service {
+  display: flex;
+  gap: 155px;
+
+  padding-top: 160px;
+  padding-bottom: 119px;
+  border-bottom: 1px solid $color-sep;
+  margin-bottom: 120px;
+
+  @include vp-1919 {
+    gap: 8%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 40px;
+
+    padding-top: 100px;
+    padding-bottom: 39px;
+    margin-bottom: 100px;
+  }
+
+  &__left-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: calc((100% - 155px) * 837 / 1765);
+    padding-top: 22px;
+
+    @include vp-1919 {
+      width: 43.6%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding-top: 0;
+    }
+  }
+
+  &__image {
+    width: 837px;
+    margin-bottom: 60px;
+    aspect-ratio: 837 / 220;
+
+    @include vp-1919 {
+      width: 100%;
+    }
+
+    @include vp-767 {
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__left-text {
+    max-width: 682px;
+    padding-right: 64px;
+    padding-left: 64px;
+    margin-left: auto;
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $color-txt2;
+
+    @include vp-1919 {
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+
+    @include vp-767 {
+      max-width: 100%;
+      padding: 0;
+      margin: 0 24px;
+
+      font-size: 15px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p+p {
+      margin-top: 10px;
+    }
+  }
+
+  &__right-wrapper {
+    width: calc((100% - 155px) * 928 / 1765);
+
+    @include vp-1919 {
+      width: 48.4%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__title-group {
+    max-width: 864px;
+    margin-right: 7%;
+    margin-bottom: 60px;
+
+    @include vp-767 {
+      max-width: 100%;
+      margin-left: 24px;
+      margin-right: 24px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding-left: 60px;
+
+    font-family: $ff-good-vibes;
+    font-size: 40px;
+    line-height: 80%;
+    color: $color-main;
+
+    @include vp-1919 {
+      font-size: calc(40 / 1920 * 100vw + 1vw);
+      padding-left: calc(26 / 1920 * 100vw);
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+      padding-left: 26px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    font-size: 88px;
+    line-height: 80%;
+    letter-spacing: -0.04em;
+
+    @include vp-1919 {
+      font-size: calc(88 / 1920 * 100vw);
+    }
+
+    @include vp-767 {
+      font-size: 36px;
+    }
+  }
+
+  &__right-text {
+    max-width: 709px;
+    margin-right: 7%;
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+
+    @include vp-767 {
+      max-width: 100%;
+      margin: 0 24px;
+
+      font-size: 15px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p+p {
+    margin-top: 10px;
+  }
+}
