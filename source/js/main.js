@@ -10,6 +10,8 @@ import { initScrollSeparator } from './modules/init-scroll-separator';
 import { initYM } from './modules/init-map';
 import { initPartnersSlider } from './modules/init-partners-slider';
 import { initNewsSlider } from './modules/init-news-slider';
+import { copyInBuffer } from './modules/copy-in-buffer';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -41,6 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initYM();
     initPartnersSlider();
     initNewsSlider();
+    copyInBuffer();
   });
 });
 

@@ -1,0 +1,62 @@
+mixin pay()
+  section.section-main
+    .container-inner
+      +bread-crumbs([
+        {
+          text: "Главная",
+          href: "index.html"
+        },
+        {
+          text: "Оплата"
+        }
+      ])
+      h1 Оплата
+    .container-inner
+      .pay
+        .pay__official-info-wrapper
+          .pay__official-info-item
+            p.pay__official-info-name Адрес:
+            .pay__official-info-value
+              p Москва, ул. Радио, дом 10, стр.4
+          .pay__official-info-item
+            p.pay__official-info-name Телефон:
+            .pay__official-info-value
+              p 8 (499) 226-26-02; 89035885025
+          .pay__official-info-item
+            p.pay__official-info-name ОГРН:
+            .pay__official-info-value
+              p 1227700742653
+          .pay__official-info-item
+            p.pay__official-info-name ИНН:
+            .pay__official-info-value
+              p 9725101884
+          .pay__official-info-item
+            p.pay__official-info-name Реквизиты:
+            .pay__official-info-value
+              p МКА «Интеллект и право»
+          .pay__official-info-item
+            p.pay__official-info-name Расчётный счёт:
+            .pay__official-info-value
+              p 40703810500000004232
+              button(type="button" data-copy).pay__official-info-button
+                +icon("copy", 28, 28)
+              span.pay__official-info-tooltip Скопировано в буфер
+          .pay__official-info-item
+            p.pay__official-info-name Банк:
+            .pay__official-info-value
+              p АО «РайффайзенБанк»
+          .pay__official-info-item
+            p.pay__official-info-name БИК:
+            .pay__official-info-value
+              p 044525700
+          .pay__official-info-item
+            p.pay__official-info-name Корр. счет:
+            .pay__official-info-value
+              p 30101810200000000700
+              button(type="button" data-copy).pay__official-info-button
+                +icon("copy", 28, 28)
+              span.pay__official-info-tooltip Скопировано в буфер
+        .pay__official-code-wrapper
+          .pay__official-code-image
+            +picture("content", "code", "png", 340, 340, "штрих-код", true)
+          p.pay__official-code-text Оплата по QR-коду
