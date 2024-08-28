@@ -11,13 +11,12 @@ mixin form()
           inputName: "full-name"
         })(data-required, data-validate-type="text")
         +custom-input({
-          inputType: "type",
+          inputType: "tel",
           inputPlaceholder: "Номер телефона",
           inputName: "phone"
         })(data-required, data-validate-type="phone")
         +custom-select({
           placeholder: "Категория",
-          error: "Выберите тему обращения",
           optionsList: [
             {text: "Общеуголовная практика", value: "id-1"},
             {text: "Уголовно-правовая защита бизнеса", value: "id-2"},
