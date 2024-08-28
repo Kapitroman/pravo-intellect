@@ -1,0 +1,42 @@
+mixin form()
+  .form
+    form(action="#" method="post")
+      .form__title
+        h2 Записаться на консультацию
+        p Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время и ответит на все интересующие вопросы.
+
+      .form__fields
+        +custom-input({
+          inputPlaceholder: "Ваше ФИО",
+          inputName: "full-name"
+        })
+        +custom-input({
+          inputType: "type",
+          inputPlaceholder: "Номер телефона",
+          inputName: "phone"
+        })
+        +custom-select({
+          placeholder: "Категория",
+          error: "Выберите тему обращения",
+          optionsList: [
+            {text: "Общеуголовная практика", value: "id-1"},
+            {text: "Уголовно-правовая защита бизнеса", value: "id-2"},
+            {text: "Арбитражная практика", value: "id-3"},
+            {text: "Банкротство", value: "id-4"},
+            {text: "Правовое сопровождение бизнеса", value: "id-5"},
+            {text: "Гражданская практика", value: "id-6"},
+            {text: "Договорная практика", value: "id-7"}
+          ]
+        })(data-select, data-validate-type="select", data-name="category", data-id="id-category").custom-select
+
+        +custom-textarea({
+          inputPlaceholder: "Описание ситуации",
+          inputName: "description"
+        })
+
+      +btn({
+        type: "submit",
+        text: "Записаться на консультацию"
+      })
+
+      p.form__link-agreement Нажимая «отправить», я даю согласие на <a href="#">обработку персональных данных</a>

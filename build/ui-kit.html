@@ -214,35 +214,22 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
             <div>
               <ul>
                 <li><a href="#modals">Модальные окна</a></li>
-                <li><a href="#buttons">Кнопки</a></li>
-                <li><a href="#forms">Элементы форм</a></li>
               </ul>
             </div>
           </div>
-          <div class="container"><a class="uikit__header-link" href="sitemap.html"><img src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта"></a>
-            <h1 class="uikit__h1">Компоненты, используемые на проекте</h1>
-            <section class="uikit__section">
-              <h2 class="uikit__h2">Название компонента или группы компонентов</h2>
-              <p class="uikit__text">Информация о компоненте (подсказки \ предупреждение \ важная информация)</p>
-              <div class="uikit__component">
-                <p class="uikit__text"> Класс компонента \ модификаторы</p>
-                <pre><code class="language-pug">p Пример кода
-</code></pre>
-              </div>
-            </section>
-            <section class="uikit__section">
-              <h2 class="uikit__h2">Название компонента или группы компонентов</h2>
-              <p class="uikit__text">Информация о компоненте (подсказки \ предупреждение \ важная информация)</p>
-              <div class="uikit__component">
-                <p class="uikit__text"> Класс компонента \ модификаторы</p><a class="logo" href="index.html" aria-label="Переход на главную"><img src="./img/svg/logo-header.svg" width="156" height="44" alt="Логотип проекта"></a><a class="logo" href="index.html" aria-label="Переход на главную"><img src="./img/svg/logo-footer.svg" width="156" height="44" alt="Логотип проекта"></a>
-                <pre><code class="language-pug">p Пример кода
-
-
-</code></pre>
-              </div>
-            </section>
+          <div class="container"><a class="uikit__header-link" href="sitemap.html"><img src="./img/svg/logo-header.svg" width="300" alt="Логотип проекта"></a>
+            <h1 class="uikit__h1">Модальные окна, используемые на проекте</h1>
             <section class="uikit__section" id="modals">
-              <h2 class="uikit__h2">Модальные окна</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.modal \ .modal--sign-up-consultation</p>
+                <button class="btn" type="button" data-open-modal="sign-up-consultation">
+                  <svg width="13" height="13" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#arrow-consultation"></use>
+                  </svg><span>Консультация</span>
+                </button>
+                <pre><code class="language-pug">+btn({text: "Консультация"})(data-open-modal="sign-up-consultation")
+</code></pre>
+              </div>
               <div class="uikit__component">
                 <p class="uikit__text uikit__text--class">.modal \ .modal--feedback</p>
                 <button class="btn" type="button" data-open-modal="feedback">
@@ -263,128 +250,6 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 </code></pre>
               </div>
             </section>
-            <section class="uikit__section" id="buttons">
-              <h2 class="uikit__h2">Кнопки</h2>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.btn \ default \ button</p>
-                <button class="btn" type="button">
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#arrow-consultation"></use>
-                  </svg><span>Кнопка</span>
-                </button>
-                <pre><code class="language-pug">+btn({text: "Текст", href: "#"})</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.btn \ .btn--red \ link</p>
-                <a class="btn btn--red" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#arrow-consultation"></use>
-                  </svg><span>Текст</span>
-                </a>
-                <pre><code class="language-pug">+btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.btn \ disabled \ button</p>
-                <button class="btn" type="button" disabled>
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#arrow-consultation"></use>
-                  </svg><span>Текст</span>
-                </button>
-                <pre><code class="language-pug">+btn({text: "Текст"})(disabled)
-</code></pre>
-              </div>
-            </section>
-            <section class="uikit__section" id="forms">
-              <h2 class="uikit__h2">Элементы форм</h2>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.custom-input \ type="text"</p>
-                <div class="custom-input">
-                  <label><span class="custom-input__label">Введите ваше имя</span>
-                    <input type="text" name="user-name-1">
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-input({
-  inputLabel: "Введите ваше имя",
-  inputName: "user-name-1",
-})</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.custom-input \ type="tel"</p>
-                <div class="custom-input">
-                  <label><span class="custom-input__label">Введите номер телефона</span>
-                    <input type="tel" name="user-phone">
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-input({
-  inputType: "tel",
-  inputLabel: "Введите номер телефона",
-  inputName: "user-phone",
-})</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.custom-input \ type="email"</p>
-                <div class="custom-input">
-                  <label><span class="custom-input__label">Введите вашу почту</span>
-                    <input type="email" name="user-mail">
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-input({
-  inputType: "email",
-  inputLabel: "Введите вашу почту",
-  inputName: "user-mail",
-})</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">+custom-textarea \ default</p>
-                <div class="custom-textarea">
-                  <label><span class="custom-textarea__label">Расскажите о себе</span>
-                    <textarea name="user-info"></textarea>
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-textarea({
-  inputLabel: "Расскажите о себе",
-  inputName: "user-info"
-})</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">+custom-toggle \ default</p>
-                <div class="custom-toggle custom-toggle--checkbox">
-                  <label>
-                    <input type="checkbox" value="user-agreement-1" name="user-agreement"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Чекбокс</span>
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-toggle({
-  inputLabel: "Чекбокс",
-  inputName: "user-agreement",
-  inputValue: "user-agreement-1",
-  inputChecked: false
-}).custom-toggle--checkbox
-
-</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text">Базовый селект c placeholder</p>
-                <p class="uikit__text uikit__text--class">+custom-select \ default</p>
-                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-1"><span class="custom-select__placeholder">Выберите одну из опций</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Тема 1</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Тема 2</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Тема 3</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Тема 4</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Тема 5</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Тема 6</li>
-                  </ul>
-                </div>
-                <pre><code class="language-pug">+custom-select({
-  placeholder: "Выберите одну из опций",
-  error: "Выберите тему обращения",
-  optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
-})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1")
-
-</code></pre>
-              </div>
-            </section>
           </div>
         </div>
       </main>
@@ -398,6 +263,64 @@ Prism.languages.javascript=Prism.languages.extend("clike",{"class-name":[Prism.l
 !function(e){e.languages.pug={comment:{pattern:/(^([\t ]*))\/\/.*(?:(?:\r?\n|\r)\2[\t ].+)*/m,lookbehind:!0},"multiline-script":{pattern:/(^([\t ]*)script\b.*\.[\t ]*)(?:(?:\r?\n|\r(?!\n))(?:\2[\t ].+|\s*?(?=\r?\n|\r)))+/m,lookbehind:!0,inside:e.languages.javascript},filter:{pattern:/(^([\t ]*)):.+(?:(?:\r?\n|\r(?!\n))(?:\2[\t ].+|\s*?(?=\r?\n|\r)))+/m,lookbehind:!0,inside:{"filter-name":{pattern:/^:[\w-]+/,alias:"variable"},text:/\S[\s\S]*/}},"multiline-plain-text":{pattern:/(^([\t ]*)[\w\-#.]+\.[\t ]*)(?:(?:\r?\n|\r(?!\n))(?:\2[\t ].+|\s*?(?=\r?\n|\r)))+/m,lookbehind:!0},markup:{pattern:/(^[\t ]*)<.+/m,lookbehind:!0,inside:e.languages.markup},doctype:{pattern:/((?:^|\n)[\t ]*)doctype(?: .+)?/,lookbehind:!0},"flow-control":{pattern:/(^[\t ]*)(?:case|default|each|else|if|unless|when|while)\b(?: .+)?/m,lookbehind:!0,inside:{each:{pattern:/^each .+? in\b/,inside:{keyword:/\b(?:each|in)\b/,punctuation:/,/}},branch:{pattern:/^(?:case|default|else|if|unless|when|while)\b/,alias:"keyword"},rest:e.languages.javascript}},keyword:{pattern:/(^[\t ]*)(?:append|block|extends|include|prepend)\b.+/m,lookbehind:!0},mixin:[{pattern:/(^[\t ]*)mixin .+/m,lookbehind:!0,inside:{keyword:/^mixin/,function:/\w+(?=\s*\(|\s*$)/,punctuation:/[(),.]/}},{pattern:/(^[\t ]*)\+.+/m,lookbehind:!0,inside:{name:{pattern:/^\+\w+/,alias:"function"},rest:e.languages.javascript}}],script:{pattern:/(^[\t ]*script(?:(?:&[^(]+)?\([^)]+\))*[\t ]).+/m,lookbehind:!0,inside:e.languages.javascript},"plain-text":{pattern:/(^[\t ]*(?!-)[\w\-#.]*[\w\-](?:(?:&[^(]+)?\([^)]+\))*\/?[\t ]).+/m,lookbehind:!0},tag:{pattern:/(^[\t ]*)(?!-)[\w\-#.]*[\w\-](?:(?:&[^(]+)?\([^)]+\))*\/?:?/m,lookbehind:!0,inside:{attributes:[{pattern:/&[^(]+\([^)]+\)/,inside:e.languages.javascript},{pattern:/\([^)]+\)/,inside:{"attr-value":{pattern:/(=\s*(?!\s))(?:\{[^}]*\}|[^,)\r\n]+)/,lookbehind:!0,inside:e.languages.javascript},"attr-name":/[\w-]+(?=\s*!?=|\s*[,)])/,punctuation:/[!=(),]+/}}],punctuation:/:/,"attr-id":/#[\w\-]+/,"attr-class":/\.[\w\-]+/}},code:[{pattern:/(^[\t ]*(?:-|!?=)).+/m,lookbehind:!0,inside:e.languages.javascript}],punctuation:/[.\-!=|]+/};for(var t=[{filter:"atpl",language:"twig"},{filter:"coffee",language:"coffeescript"},"ejs","handlebars","less","livescript","markdown",{filter:"sass",language:"scss"},"stylus"],n={},a=0,i=t.length;a<i;a++){var r=t[a];r="string"==typeof r?{filter:r,language:r}:r,e.languages[r.language]&&(n["filter-"+r.filter]={pattern:RegExp("(^([\t ]*)):<filter_name>(?:(?:\r?\n|\r(?!\n))(?:\\2[\t ].+|\\s*?(?=\r?\n|\r)))+".replace("<filter_name>",(function(){return r.filter})),"m"),lookbehind:!0,inside:{"filter-name":{pattern:/^:[\w-]+/,alias:"variable"},text:{pattern:/\S[\s\S]*/,alias:[r.language,"language-"+r.language],inside:e.languages[r.language]}}})}e.languages.insertBefore("pug","filter",n)}(Prism);
 
       </script>
+    </div>
+    <div class="modal modal--preload modal--sign-up-consultation" data-modal="sign-up-consultation">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="form">
+            <form action="#" method="post">
+              <div class="form__title">
+                <h2>Записаться на консультацию</h2>
+                <p>Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время и ответит на все интересующие вопросы.</p>
+              </div>
+              <div class="form__fields">
+                <div class="custom-input">
+                  <label>
+                    <input type="text" name="full-name" placeholder="Ваше ФИО">
+                  </label>
+                </div>
+                <div class="custom-input">
+                  <label>
+                    <input type="type" name="phone" placeholder="Номер телефона">
+                  </label>
+                </div>
+                <div class="custom-select custom-select" data-select data-validate-type="select" data-name="category" data-id="id-category"><span class="custom-select__placeholder">Категория</span>
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon">
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#select-arror"></use>
+                      </svg></span></button>
+                  <ul class="custom-select__list" role="listbox">
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Общеуголовная практика</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Уголовно-правовая защита бизнеса</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Арбитражная практика</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Банкротство</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Правовое сопровождение бизнеса</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Гражданская практика</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-7" aria-selected="false" role="option">Договорная практика</li>
+                  </ul>
+                </div>
+                <div class="custom-textarea">
+                  <label>
+                    <textarea name="description" placeholder="Описание ситуации"></textarea>
+                  </label>
+                </div>
+              </div>
+              <button class="btn" type="submit">
+                <svg width="13" height="13" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#arrow-consultation"></use>
+                </svg><span>Записаться на консультацию</span>
+              </button>
+              <p class="form__link-agreement">Нажимая «отправить», я даю согласие на <a href="#">обработку персональных данных</a></p>
+            </form>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="modal modal--preload modal--feedback" data-modal="feedback">
       <div class="modal__wrapper">

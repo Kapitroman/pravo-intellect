@@ -39,11 +39,10 @@ mixin header(headerMods, currentUrl)
         p.text-indent.header__slogan
           | От простой консультации до сложных судебных споров – мы всегда рядом,
           | чтобы вы могли уверенно двигаться вперед.
-        //-+link-consultation()
         +btn({
           href: "#",
           text: "Консультация"
-        })
+        })(data-open-modal="sign-up-consultation")
       button.header__menu-button(type="button", data-burger, aria-label="Переключатель отображения меню", aria-pressed="false")
         +icon("open-burger", 15, 15).header__open-burger
         +icon("close-burger", 15, 15).header__close-burger

@@ -32,7 +32,7 @@
               От простой консультации до сложных судебных споров – мы всегда рядом,
               чтобы вы могли уверенно двигаться вперед.
             </p>
-            <a class="btn" href="#">
+            <a class="btn" href="#" data-open-modal="sign-up-consultation">
               <svg width="13" height="13" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#arrow-consultation"></use>
               </svg><span>Консультация</span>
@@ -123,7 +123,7 @@
                   <p class="footer__contacts-data"><a href="№">Inst</a><a href="#">Wa</a><a href="#">Tg</a></p>
                 </div>
               </div>
-              <a class="btn" href="#">
+              <a class="btn" href="#" data-open-modal="sign-up-consultation">
                 <svg width="13" height="13" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#arrow-consultation"></use>
                 </svg><span>Консультация</span>
@@ -187,6 +187,64 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--sign-up-consultation" data-modal="sign-up-consultation">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="form">
+            <form action="#" method="post">
+              <div class="form__title">
+                <h2>Записаться на консультацию</h2>
+                <p>Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время и ответит на все интересующие вопросы.</p>
+              </div>
+              <div class="form__fields">
+                <div class="custom-input">
+                  <label>
+                    <input type="text" name="full-name" placeholder="Ваше ФИО">
+                  </label>
+                </div>
+                <div class="custom-input">
+                  <label>
+                    <input type="type" name="phone" placeholder="Номер телефона">
+                  </label>
+                </div>
+                <div class="custom-select custom-select" data-select data-validate-type="select" data-name="category" data-id="id-category"><span class="custom-select__placeholder">Категория</span>
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon">
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#select-arror"></use>
+                      </svg></span></button>
+                  <ul class="custom-select__list" role="listbox">
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Общеуголовная практика</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Уголовно-правовая защита бизнеса</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Арбитражная практика</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Банкротство</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Правовое сопровождение бизнеса</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Гражданская практика</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-7" aria-selected="false" role="option">Договорная практика</li>
+                  </ul>
+                </div>
+                <div class="custom-textarea">
+                  <label>
+                    <textarea name="description" placeholder="Описание ситуации"></textarea>
+                  </label>
+                </div>
+              </div>
+              <button class="btn" type="submit">
+                <svg width="13" height="13" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#arrow-consultation"></use>
+                </svg><span>Записаться на консультацию</span>
+              </button>
+              <p class="form__link-agreement">Нажимая «отправить», я даю согласие на <a href="#">обработку персональных данных</a></p>
+            </form>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
