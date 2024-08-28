@@ -38,12 +38,6 @@
     @include vp-767 {
       font-size: 16px;
     }
-
-    /*
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
-    }
-    */
   }
 
   select {
@@ -90,8 +84,6 @@
       border-bottom: 1px solid $color-transparent;
     }
 
-
-
     &:hover {
       border-bottom: 1px solid $color-main;
     }
@@ -112,7 +104,6 @@
     z-index: 1;
 
     width: 100%;
-    // max-height: 240px;
     max-height: 160px;
     margin: 0;
     padding: 0;
@@ -155,20 +146,17 @@
 
       @media (hover: hover) {
         &:hover:not(.focus-visible) {
-          //background-color: rgba(0, 0, 0, 0.2);
           background-color: $color-bg;
         }
       }
 
       &.focus-visible:focus {
-        //background-color: rgba(0, 0, 0, 0.2);
         background-color: $color-bg;
       }
     }
 
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
-        //background-color: rgba(0, 0, 0, 0.4);
         background-color: $color-bg2;
       }
     }
@@ -233,19 +221,6 @@
       width: 16px;
       height: 16px;
     }
-
-    /*
-    flex-shrink: 0;
-    width: 20px;
-    height: 10px;
-    margin-left: auto;
-
-    background-color: #000000;
-
-    transition: transform 0.3s ease;
-
-    clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
-    */
   }
 
   &.is-disabled {
@@ -274,8 +249,6 @@
       svg {
         transform: rotate(180deg);
       }
-
-      //transform: rotate(180deg);
     }
 
     .custom-select__label {
