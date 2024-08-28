@@ -313,6 +313,7 @@
     line-height: 19.2px;
     letter-spacing: -0.02em;
     color: $color-txt2;
+    -webkit-text-fill-color: $color-txt2;
 
     @include vp-767 {
       font-size: 15px;

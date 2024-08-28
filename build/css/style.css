@@ -2024,6 +2024,7 @@ button,
   line-height: 19.2px;
   letter-spacing: -0.02em;
   color: #81858C;
+  -webkit-text-fill-color: #81858C;
 }
 @media (max-width: 767px) {
   .footer__official-details {
