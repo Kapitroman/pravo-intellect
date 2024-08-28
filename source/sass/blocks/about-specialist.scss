@@ -103,15 +103,19 @@
     }
 
     li {
+
       display: flex;
-      align-items: center;
       gap: 12px;
+
 
       &::before {
         content: "";
 
+        flex-shrink: 0;
+
         width: 16px;
         height: 1px;
+        margin-top: 9px;
 
         background-color: $color-black;
       }
