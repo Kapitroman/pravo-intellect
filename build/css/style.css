@@ -3211,8 +3211,10 @@ a.logo.focus-visible:focus {
           flex-direction: column;
   gap: 25px;
   width: 100%;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .card-partner__photo {
   width: 100%;
@@ -3257,6 +3259,15 @@ a.logo.focus-visible:focus {
   opacity: 0.7;
 }
 
+@media (min-width: 1024px) {
+  .slider-partners {
+    padding-bottom: 64px;
+  }
+  .slider-partners .swiper-slide-next {
+    -webkit-transform: translateY(64px);
+            transform: translateY(64px);
+  }
+}
 .card-news-item {
   display: -webkit-box;
   display: -ms-flexbox;
