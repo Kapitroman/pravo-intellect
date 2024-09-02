@@ -1,0 +1,9 @@
+mixin card-news-item-options(options)
+  .card-news-item&attributes(attributes)
+    time(datetime= options.datetime).card-news-item__data= options.time
+    a(href= options.href).card-news-item__link
+      .card-news-item__title= options.title
+      p.card-news-item__description= options.text[0]
+    p.card-news-item__tag-list
+      a(href="#").card-news-item__tag-item #события
+

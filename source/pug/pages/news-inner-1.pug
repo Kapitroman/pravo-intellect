@@ -1,0 +1,49 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Дмитрий Фомин и партнеры. Новость"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "news-inner-1.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    section.news-item-head.section-main-picture
+      .container-inner
+        .section-main-picture__info-wrapper
+          +bread-crumbs([
+            {
+              text: "Главная",
+              href: "index.html"
+            },
+            {
+              text: "Новости",
+              href: "news.html"
+            },
+            {
+              text: "Адвокаты Адвокатского бюро «Дмитрий Фомин и Партнёры» (ранее – МКА «Интеллект и Право») добились смягчения квалификации преступления и заявили ходатайство о немедленном освобождении доверителя из-под стражи."
+            }
+          ])
+          h1.news-item-head__title Адвокаты Адвокатского бюро «Дмитрий Фомин и Партнёры» (ранее – МКА «Интеллект и Право») добились смягчения квалификации преступления и заявили ходатайство о немедленном освобождении доверителя из-под стражи.
+          .news-item-head__pretext
+            p Опубликовано:
+              time(datetime="2024-09-02") 2 сентября 2024 г.
+            a(href="#") #события
+          .news-item-head__text
+            p
+             | Адвокаты Адвокатского бюро «Дмитрий Фомин и Партнёры» Масрур Джалилов и Полина Власюк
+             | добились смягчения квалификации преступления, вменяемого подзащитному Адвокатского бюро
+             | с ч.2 ст.162 УК РФ (разбой, совершённый группой лиц по предварительному сговору)
+             | на ч.1 ст.116 и п. «в» ч.2 ст. 158 УК РФ. В настоящее время органами предварительного
+             | расследования рассматривается ходатайство защитников об освобождении доверителя из-под стражи.
+
+      .section-main-picture__images
+        +picture("content/services", "service-1", "png", 773, 760, "фото для раздела", false)
+    +slider-news-section("Смотрите так же")
+
+block modals
+  +modal("modal--sign-up-consultation")(data-modal="sign-up-consultation")
+    +modal-sign-up-consultation()
